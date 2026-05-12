@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.features-grid {
+  overflow: hidden;
+}
+
 .features::before {
   content: '';
   position: absolute;
@@ -139,11 +143,13 @@
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: 1fr 1fr; }
   .fcard--large { grid-column: span 2; }
+  .fcard:nth-child(5) { grid-column: span 2; }
   .features-inner { padding: 0 24px; }
   .features { padding: 80px 0; }
 }
 
 @media (max-width: 540px) {
   .features-grid { grid-template-columns: 1fr; }
-  .fcard--large { grid-column: span 1; }
+  .fcard, .fcard--large { grid-column: 1 / -1; }
+  .features { overflow: hidden; }
 }

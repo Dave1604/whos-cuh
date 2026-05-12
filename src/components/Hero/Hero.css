@@ -289,13 +289,12 @@
   .hero-logo { object-position: center; }
 
   .hero-right {
-    padding: 60px 24px 80px;
-    min-height: 60svh;
+    padding: 56px 24px 72px;
+    min-height: auto;
   }
 
-  .hero-float--top { left: 0; top: 16px; }
-  .hero-float--bottom { right: 0; bottom: 16px; }
+  .hero-float { display: none; }
 
-  .hero-phone { width: 210px; }
-  .hero-phone-inner { height: 480px; }
+  .hero-phone { width: 220px; }
+  .hero-phone-inner { height: 500px; }
 }

@@ -65,6 +65,8 @@ const shuffleFrom = [
   { rotate:  5, x:  16, y: 60, scale: 0.80 },
 ]
 
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 600
+
 export default function Features() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -96,13 +98,10 @@ export default function Features() {
                 key={f.title}
                 className={`fcard fcard--${f.size}`}
                 style={{ '--accent': f.accent } as React.CSSProperties}
-                initial={{
-                  opacity: 0,
-                  y: from.y,
-                  x: from.x,
-                  rotate: from.rotate,
-                  scale: from.scale,
-                }}
+                initial={isMobile
+                  ? { opacity: 0, y: 30, scale: 0.95 }
+                  : { opacity: 0, y: from.y, x: from.x, rotate: from.rotate, scale: from.scale }
+                }
                 animate={inView ? { opacity: 1, y: 0, x: 0, rotate: 0, scale: 1 } : {}}
                 transition={{
                   duration: 0.65,
