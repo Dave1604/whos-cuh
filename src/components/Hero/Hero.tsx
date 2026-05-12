@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../../assets/logo.png'
 import screenHome from '../../assets/screen-home.png'
 import screenRestaurant from '../../assets/screen-restaurant.png'
 import screenJollof from '../../assets/screen-jollof.png'
@@ -93,8 +92,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease }}
         >
-          <img src={logo} alt="Who's Cuh?" className="hero-logo" />
-
           <div className="hero-pill">
             <span className="hero-pill-dot" />
             Now building · Ijebu-Ode &amp; Ijagun
