@@ -111,9 +111,10 @@
   position: relative;
 }
 
+
 .about-phone-frame {
   width: 270px;
-  height: 640px;
+  height: 600px;
   background: #fff;
   border-radius: 46px;
   overflow: hidden;
@@ -228,7 +229,6 @@
   }
   .about { padding-top: 80px; }
   .about-right { order: -1; }
-  .about-phone-frame { width: 240px; height: 520px; border-radius: 40px; }
   .about-stats-strip {
     grid-template-columns: 1fr;
     padding: 0;

@@ -1,19 +1,19 @@
 .coming-soon {
-  padding: 120px 0;
+  padding: 72px 0 80px;
   position: relative;
   overflow: hidden;
-  background: #F9F6F1;
+  background: #F8780A;
 }
 
 .coming-soon::before {
   content: '';
   position: absolute;
-  top: -200px;
+  top: -160px;
   left: 50%;
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(ellipse, rgba(248, 120, 10, 0.1) 0%, transparent 65%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.08) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -27,24 +27,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
 }
 
-.coming-soon-inner .section-eyebrow { justify-content: center; }
+.coming-soon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 14px;
+}
+
+/* Eyebrow label on orange */
+.coming-soon .section-eyebrow {
+  color: rgba(255, 255, 255, 0.75);
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.coming-soon .section-eyebrow::before {
+  background: rgba(255, 255, 255, 0.75);
+}
 
 .coming-soon-headline {
   font-size: clamp(40px, 5.5vw, 68px);
   font-weight: 800;
   letter-spacing: -2px;
   line-height: 1.04;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* "ready." flips to dark for contrast on orange */
+.coming-soon-headline .text-accent {
   color: #1A1A1A;
 }
 
 .coming-soon-sub {
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.48);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.75;
-  max-width: 480px;
+  max-width: 440px;
+  margin-bottom: 4px;
 }
 
 .area-tags {
@@ -52,15 +74,15 @@
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: -8px;
+  margin-top: 2px;
 }
 
 .area-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(248, 120, 10, 0.08);
-  border: 1px solid rgba(248, 120, 10, 0.25);
+  background: #fff;
+  border: 1px solid #fff;
   color: #F8780A;
   font-size: 13px;
   font-weight: 700;
@@ -69,25 +91,26 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Countdown */
+/* Countdown — pushed well below the text block */
 .countdown {
   display: flex;
   align-items: flex-end;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 32px;
 }
 
 .countdown-unit {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   padding: 24px 20px 18px;
-  min-width: 90px;
+  min-width: 96px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
 }
 
 .countdown-unit::after {
@@ -96,7 +119,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, transparent, #F8780A, transparent);
 }
 
@@ -115,7 +138,7 @@
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.38);
   font-weight: 700;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -124,23 +147,46 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 36px;
   font-weight: 800;
-  color: rgba(248, 120, 10, 0.3);
+  color: rgba(255, 255, 255, 0.45);
   line-height: 1;
   padding-bottom: 28px;
 }
 
-/* Email form */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #F8780A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 28px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  background: #1A1A1A;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Email form — pushed below countdown */
 .email-form {
   display: flex;
   gap: 10px;
   width: 100%;
   max-width: 480px;
+  margin-top: 24px;
 }
 
 .email-input {
   flex: 1;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 100px;
   padding: 15px 24px;
   color: #1A1A1A;
@@ -148,38 +194,38 @@
   font-size: 15px;
   outline: none;
   min-width: 0;
-  transition: border-color 0.25s, box-shadow 0.25s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
-.email-input::placeholder { color: rgba(0, 0, 0, 0.3); }
+.email-input::placeholder { color: rgba(0, 0, 0, 0.35); }
 
 .email-input:focus {
-  border-color: #F8780A;
-  box-shadow: 0 0 0 3px rgba(248, 120, 10, 0.12);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 .email-success {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(248, 120, 10, 0.08);
-  border: 1px solid rgba(248, 120, 10, 0.25);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
   padding: 18px 26px;
-  color: #c96000;
+  color: #fff;
   font-size: 15px;
   font-weight: 600;
   font-family: 'Plus Jakarta Sans', sans-serif;
   max-width: 480px;
   width: 100%;
+  margin-top: 36px;
 }
 
 .email-success-icon {
   width: 24px;
   height: 24px;
-  background: #F8780A;
-  color: #fff;
+  background: #fff;
+  color: #F8780A;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -190,9 +236,10 @@
 }
 
 @media (max-width: 540px) {
-  .email-form { flex-direction: column; }
-  .coming-soon-inner { padding: 0 20px; gap: 24px; }
-  .coming-soon { padding: 80px 0; }
+  .email-form { flex-direction: column; margin-top: 28px; }
+  .coming-soon-inner { padding: 0 20px; }
+  .coming-soon { padding: 80px 0 100px; }
+  .countdown { margin-top: 36px; }
   .countdown-value { font-size: 32px; }
   .countdown-unit { min-width: 72px; padding: 18px 14px 14px; }
 }

@@ -74,9 +74,9 @@ export default function ComingSoon() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="section-label">Launching soon</span>
+          <span className="section-eyebrow">Launching soon</span>
           <h2 className="coming-soon-headline">
-            We're almost <span className="text-orange">ready.</span>
+            We're almost <span className="text-accent">ready.</span>
           </h2>
           <p className="coming-soon-sub">
             Be the first in Ijebu-Ode and Ijagun to know when we go live.

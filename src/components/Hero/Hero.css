@@ -160,7 +160,7 @@
 
 .hero-phone {
   width: 248px;
-  background: var(--brand);
+  background: #fff;
   border-radius: 46px;
   padding: 3px;
   box-shadow:
@@ -175,12 +175,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 562px;
-}
-
-.hero-phone-bar {
-  background: #fff;
-  flex-shrink: 0;
+  height: 540px;
 }
 
 .hero-phone-screen {
@@ -190,16 +185,18 @@
   object-position: top;
 }
 
-.hero-phone-bar--bottom {
-  height: 24px;
+.hero-phone-bar {
+  height: 22px;
+  background: #fff;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-phone-bar--bottom::after {
+.hero-phone-bar::after {
   content: '';
-  width: 100px;
+  width: 90px;
   height: 4px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -294,7 +291,4 @@
   }
 
   .hero-float { display: none; }
-
-  .hero-phone { width: 220px; }
-  .hero-phone-inner { height: 500px; }
 }

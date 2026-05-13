@@ -121,7 +121,7 @@
 /* Dual Phones */
 .dual-phones {
   position: relative;
-  height: 560px;
+  height: 540px;
   width: 320px;
   margin: 0 auto;
 }
@@ -144,7 +144,7 @@
 
 .dphone--front {
   width: 220px;
-  height: 524px;
+  height: 500px;
   bottom: 0;
   right: 0;
   z-index: 2;
@@ -155,7 +155,7 @@
 
 .dphone--back {
   width: 190px;
-  height: 460px;
+  height: 440px;
   top: 0;
   left: 0;
   z-index: 1;

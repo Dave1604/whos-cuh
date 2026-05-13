@@ -18,11 +18,9 @@ function HeroPhone() {
 
   return (
     <div className="hero-phone-wrap">
-      {/* Decorative rings */}
       <div className="hero-ring hero-ring--1" aria-hidden="true" />
       <div className="hero-ring hero-ring--2" aria-hidden="true" />
 
-      {/* Phone */}
       <div className="hero-phone">
         <div className="hero-phone-inner">
           <AnimatePresence mode="wait">
@@ -37,11 +35,10 @@ function HeroPhone() {
               transition={{ duration: 0.4, ease }}
             />
           </AnimatePresence>
-          <div className="hero-phone-bar hero-phone-bar--bottom" />
+          <div className="hero-phone-bar" />
         </div>
       </div>
 
-      {/* Floating info cards */}
       <motion.div
         className="hero-float hero-float--top"
         animate={{ y: [0, -7, 0] }}
@@ -62,11 +59,10 @@ function HeroPhone() {
         <span className="hero-float-emoji">🍛</span>
         <div>
           <p className="hero-float-title">5+ Restaurants</p>
-          <p className="hero-float-sub">& growing</p>
+          <p className="hero-float-sub">&amp; growing</p>
         </div>
       </motion.div>
 
-      {/* Screen dots */}
       <div className="hero-dots">
         {screens.map((_, i) => (
           <button
@@ -84,7 +80,6 @@ function HeroPhone() {
 export default function Hero() {
   return (
     <section className="hero" id="hero">
-      {/* LEFT — cream */}
       <div className="hero-left">
         <motion.div
           className="hero-left-inner"
@@ -137,13 +132,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* RIGHT — orange */}
       <div className="hero-right">
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease, delay: 0.15 }}
-          style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+          style={{ display: 'flex', justifyContent: 'center' }}
         >
           <HeroPhone />
         </motion.div>
